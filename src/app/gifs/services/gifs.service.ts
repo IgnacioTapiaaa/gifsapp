@@ -44,7 +44,7 @@ export class GifsService {
     this.organizeHistory(tag);
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '10')
+      .set('limit', '30')
       .set('q', tag);
     const url = `${this.serviceUrl}/search`;
     this.http.get<SearchResponse>(url, { params }).subscribe((resp) => {
