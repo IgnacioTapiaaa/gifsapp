@@ -36,6 +36,7 @@ export class GifsService {
     const temporal = localStorage.getItem('history');
     if (!temporal) return;
     this._tagsHistory = JSON.parse(temporal);
+    console.log(this._tagsHistory);
     this.searchTag(this._tagsHistory[0]);
   }
 

@@ -11,6 +11,12 @@ export class LazyImageComponent implements OnInit {
   @Input()
   public alt: string = '';
 
+  @Input()
+  public height: string = '35';
+
+  @Input()
+  public width: string = '35';
+
   public hasLoaded: boolean = false;
 
   ngOnInit(): void {

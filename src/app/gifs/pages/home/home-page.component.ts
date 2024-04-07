@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GifsService } from '../../services/gifs.service';
 import { Gif } from '../../interfaces/gifs.interfaces';
 
@@ -9,7 +9,16 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 export class HomePageComponent {
   constructor(private gifsService: GifsService) {}
 
+  @Input()
+  public showSidebar!: string;
+
+  @Output() variableChanged: EventEmitter<any> = new EventEmitter();
+
   get gifs(): Gif[] {
     return this.gifsService.gifList;
+  }
+
+  showSidebarClick(): void {
+    this.variableChanged.emit('');
   }
 }

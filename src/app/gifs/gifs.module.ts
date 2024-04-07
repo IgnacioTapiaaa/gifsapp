@@ -5,6 +5,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardComponent } from './components/card/card.component';
 import { SharedModule } from '../shared/shared.module';
+import { ModalComponent } from './components/modal/modal.component';
+import { SharedWithComponent } from './components/shared-with/shared-with.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { SharedModule } from '../shared/shared.module';
     SearchBoxComponent,
     CardListComponent,
     CardComponent,
+    ModalComponent,
+    SharedWithComponent,
   ],
   imports: [CommonModule, SharedModule],
   exports: [HomePageComponent],

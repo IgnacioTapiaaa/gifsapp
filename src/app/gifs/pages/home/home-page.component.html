@@ -1,7 +1,17 @@
 <div class="ro p-3">
   <div class="col-12">
     <!-- Busqueda -->
-    <gifs-search-box></gifs-search-box>
+    <div class="d-flex align-items-center">
+      <img
+        src="assets/list.svg"
+        alt=""
+        height="35"
+        width="35"
+        style="margin-right: 10px"
+        (click)="showSidebarClick()"
+      />
+      <gifs-search-box style="width: 100%"></gifs-search-box>
+    </div>
   </div>
   <div class="col-12 pt-2">
     <!-- Listado de Gifs -->
